@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artykuł o CSS</title>
+    <style>
+        h1,
+        h2 {
+            color: brown;
+            background-color: bisque;
+        }
+    </style>
+    <link rel="stylesheet" href="style/uklad.css">
+    <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/tabela.css">
+</head>
+
+<body>
+    <header>
+        <h1 style="color: white; background-color: black;">NASZA KADRA</h1>
+    </header>
+    <div class="kontener">
+        <nav>
+            <h2>Menu</h2>
+            <ul>
+                <li>
+                    <a href="index.html">Strona główna</a>
+                </li>
+                <li>
+                    <a href="historia.html">Historia</a>
+                </li>
+                <li>
+                    <a href="pracownicy.html">Pracownicy</a>
+                </li>
+                <li>
+                    <a href="nasze-osiagniecia.html">Nasze osiągnięcia</a>
+                </li>
+                <li>
+                    <a href="kontakt.html">Kontakt</a>
+                </li>
+                <li>
+                    <a href="praca.html">Praca</a>
+                </li>
+                <li>
+                    <a href="prezentacja.html">Prezentacja</a>
+                </li>
+            </ul>
+        </nav>
+        <article>
+            <section>
+                <header>
+                    <h2> Lista pracowników </h2>
+                    <table>
+                        <thead>
+                            <tr class="n">
+
+                                <td>Lp.</td>
+                                <td>Nazwisko</td>
+                                <td>Imie</td>
+                                <td colspan="8">Stanowisko</td>
+                                <td>Godziny pracy</td>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Kowalska</td>
+                                <td>Janina</td>
+                                <td class="praca" colspan="8">Główna dziekanka</td>
+                                <td>8:00-8:05</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Nowakowska</td>
+                                <td>Bernadetta</td>
+                                <td class="praca" colspan="8">Wicedziekanka</td>
+                                <td>8:00-8:10</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Maturalczyk</td>
+                                <td>Zenobia</td>
+                                <td class="praca" colspan="8">Wicedziekanka</td>
+                                <td>8:00-8:10</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Leśmian</td>
+                                <td>Genowefa</td>
+                                <td class="praca" colspan="8">Wicedziekanka</td>
+                                <td>8:00-8:10</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Małolepsza</td>
+                                <td>Aneta</td>
+                                <td class="praca" colspan="8">Protokolantka</td>
+                                <td>8:00-8:50</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Kiepska</td>
+                                <td>Weronika</td>
+                                <td class="praca" colspan="8">Skarbnik</td>
+                                <td>8:00-23:48</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Bryndza</td>
+                                <td>Bogumiła</td>
+                                <td class="praca" colspan="8">Główna kawowa</td>
+                                <td>8:00-15:00</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Sady</td>
+                                <td>Paweł</td>
+                                <td class="praca" colspan="8">Sprzataczka</td>
+                                <td>0:00-23:00</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Tupolew</td>
+                                <td>Bronisława</td>
+                                <td class="praca" colspan="8">Wicekawowa</td>
+                                <td>8:00-16:00</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Amper</td>
+                                <td>Anetka</td>
+                                <td class="praca" colspan="8">Mistrzyni gry w pasjansa</td>
+                                <td>8:00-14:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+        </article>
+
+
+    </div>
+
+    <footer>prawa autorskie MF z 2023 <br>
+        Politechnika Poznańska </footer>
+
+
+</body>
+
+</html>

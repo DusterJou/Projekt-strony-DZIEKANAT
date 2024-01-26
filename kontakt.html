@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
+    <style>
+        .naglowek{
+            color: brown;
+            background-color: bisque;
+        }
+    </style>
+    <link rel="stylesheet" href="style/uklad.css">
+    <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/formularz.css">
+    <link rel="stylesheet" href="style/canvas.css">
+</head>
+
+<body>
+    <header>
+        <h1 style="color: white; background-color: black;">Strona o HTML, CSS i JS</h1>
+    </header>
+    <div class="kontener">
+        <nav>
+            <h2 class="naglowek">Menu</h2>
+            <ul>
+                <li>
+                    <a href="index.html">Strona główna</a>
+                </li>
+                <li>
+                    <a href="historia.html">Historia</a>
+                </li>
+                <li>
+                    <a href="pracownicy.html">Pracownicy</a>
+                </li>
+                <li>
+                    <a href="nasze-osiagniecia.html">Nasze osiągnięcia</a>
+                </li>
+                <li>
+                    <a href="kontakt.html">Kontakt</a>
+                </li>
+                <li>
+                    <a href="praca.html">Praca</a>
+                </li>
+                <li>
+                    <a href="prezentacja.html">Prezentacja</a>
+                </li>
+            </ul>
+        </nav>
+        <article>
+            <form action="mailto:michal.filipiak@put.poznan.pl" method="post">
+                <p>Pole oznaczone <em>*</em> jest wymagane.</p>
+                <fieldset>
+                    <legend>Dane kontaktowe</legend>
+                    <label for="imie">Imie<em>*</em></label>
+                    <input type="text" name="imie" id="imie" placeholder="Janina" required autofocus> <br>
+    
+                    <label for="nazwisko">Nazwisko<em>*</em></label>
+                    <input type="text" name="nazwisko" id="nazwisko" placeholder="Kowalska" required> <br>
+    
+                    <label for="nr_tel">Nr telefonu<em>*</em></label>
+                    <input type="tel" name="nr_tel" id="nr_tel" placeholder="(+48)xxx-xxx-xxx"> <br>
+    
+                    <label for="email">E-mail<em>*</em></label>
+                    <input type="email" name="email" id="email" required>
+    
+                </fieldset>
+                <fieldset>
+                    <legend>Szczegółowe dane osobowe</legend>
+                    <label for="data">Data urodzenia<em>*</em> </label>
+                    <input type="date" name="data" id="data" required> <br>
+                    <label for="wiek">Wiek<em>*</em> </label>
+                    <input type="number" name="wiek" id="wiek" required> <br>
+    
+                    <label for="plec">Płeć</label>
+                    <select name="plec" id="plec">
+                        <option value="Kobieta">Kobieta</option>
+                        <option value="Mężczyzna">Mężczyzna</option>
+                    </select> <br>
+    
+                    <label for="wzrost">Wzrost</label>
+                    <input type="range" name="wzrost" id="wzrost" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Zainteresowania</legend>
+                    <input type="checkbox" name="zainteresowania" id="Elektrotechnika">
+                    <label for="Elektrotechnika">Elektrotechnika</label> <br>
+                    <input type="checkbox" name="zainteresowania" id="Energetyka">
+                    <label for="Energetyka">Energetyka</label> <br>
+                </fieldset>
+            </form>
+    
+            <input type="button" value="czyść" onclick="czysc()">
+            <label for="colorPicker">Wybierz kolor:</label>
+            <input type="color" id="colorPicker" onchange="zmienKolor(this.value)">
+            <br>
+            <canvas id="plotno" width="500" height="300"></canvas>
+    
+        </article>
+    </div>
+
+
+
+
+    <footer>prawa autorskie MF z 2023 <br>
+        Politechnika Poznańska </footer>
+
+    <script>
+        //P=(0,0)
+        //  ---------
+        // |        |
+        // |        |
+        // |        |
+        //  ---------
+        //           P=(500,300)
+
+        let can, cont, drawing = false, kolor = "black";
+
+        window.onload = function () {
+            can = document.getElementById("plotno");
+            cont = can.getContext("2d");
+
+            can.addEventListener("mousedown", startDrawing);
+            can.addEventListener("mousemove", draw);
+            can.addEventListener("mouseup", stopDrawing);
+            can.addEventListener("mouseout", stopDrawing);
+        }
+
+        function startDrawing(e) {
+            drawing = true;
+            const rect = can.getBoundingClientRect();
+            cont.beginPath();
+            cont.moveTo(e.clientX - rect.left, e.clientY - rect.top);
+        }
+
+        function draw(e) {
+            if (!drawing) return;
+            const rect = can.getBoundingClientRect();
+            cont.strokeStyle = kolor;
+            cont.lineTo(e.clientX - rect.left, e.clientY - rect.top);
+            cont.stroke();
+        }
+
+        function stopDrawing() {
+            drawing = false;
+            cont.closePath();
+        }
+
+        function zmienKolor(nowyKolor) {
+            kolor = nowyKolor;
+        }
+        
+        function czysc() {
+            if (cont == null) {
+                cont = can.getContext("2d");
+            }
+            cont.clearRect(0, 0, can.width, can.height);
+        }
+
+    </script>
+
+</body>
+
+</html>

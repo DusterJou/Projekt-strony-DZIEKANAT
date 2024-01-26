@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+h1{
+color: antiquewhite;
+}
+p{
+    color: antiquewhite;
+}
+body{
+    width: 1300px;
+    height: 800px;
+    background-image: url('../images/tlo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+}
+header, article, nav, aside, footer{
+    display: block;
+}
+article, nav, aside{
+    height: 500px;
+}
+article{
+    width: 1050px;
+    float: left;
+    overflow: auto;
+}
+.artykul{
+    width: 800px;
+    float: left;
+    overflow: auto;
+}
+nav{
+    width: 250px;
+    float: left;
+}
+aside{
+    width: 250px;
+    float: left;
+}
+body > header{
+    height: 180px;
+    width: 1300px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    font-weight: bold;
+    font-size: 35px;
+}
+footer{
+    height: 120px ;
+    width: 1300px;
+    clear: both;
+    background-color: beige;
+    color: black;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.kontener{
+    width:100%;
+    height:500px;
+    background-color: rgba(0,0,0,0.5);
+}
+li{
+    color: antiquewhite;
+}
+h3{
+    color: antiquewhite;
+}
+label{
+    color: antiquewhite;
+}

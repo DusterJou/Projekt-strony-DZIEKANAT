@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela godzin pracy</title>
+    <link rel="stylesheet" href="style/uklad.css">
+    <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/tabela.css">
+</head>
+<body>
+    <header>
+        <h1>Strona o HTML, CSS i JS</h1>
+    </header>
+    <nav>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Strona główna</a> </li>
+            <li><a href="article.html">Artykuł </a></li>
+            <li><a href="tabela.html">Tabela</a></li>
+            <li><a href="formularz.html">Formularz</a></li>
+            <li><a href="">JavaScript</a></li>
+            <li><a href="">Canvas 123</a></li>
+        </ul>
+    </nav>
+    <article>
+        <p>Tab.1. Tabela godzin pracy w zakładzie 1.</p>
+
+        table>tr*5>td*11 tabulator lub enter
+        <table>
+            <tr class="n">
+                <td rowspan="2">Lp.</td>
+                <td rowspan="2">Nazwisko</td>
+                <td rowspan="2">Imie</td>
+                <td colspan="8">Godziny</td>
+
+            </tr>
+            <tr class="n">
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Kowalski</td>
+                    <td>Jan</td>
+                    <td class="praca" colspan="6">8:00-14:00</td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Nowakowski</td>
+                    <td>Zenon</td>
+                    <td colspan="2"></td>
+                    <td class="praca" colspan="6">10:00-16:00</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Walkowiak</td>
+                    <td>Jędrzej</td>
+                    <td colspan="2"></td>
+                    <td class="praca" colspan="6">10:00-16:00</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </article>
+
+    <aside>
+        <iframe src="" ></iframe>
+    </aside>
+
+    <footer>prawa autorskie MF z 2023 <br>
+    Politechnika Poznańska  </footer>
+
+</body>
+</html>

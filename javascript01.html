@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - string</title>
+</head>
+<body>
+    <script>    
+        let zmienna = "Ala ma kota i rybki";
+        let zm= new String("abc");
+        
+        //alert(zmienna.length);
+        document.write(zmienna.charAt(4)+"<br>");
+        document.write(
+            zmienna.charAt(zmienna.length-1)
+            +"<br>");
+            
+        for (let index = 0; index < zmienna.length; index++) {
+            
+            for(let j=0; j< index; j++) { 
+                document.write("&nbsp;"); 
+            }
+            document.write(zmienna.charAt(index)+"<br>");
+        }
+        document.write("<hr>");
+
+        document.write(zmienna.substring(6,11)+"<br>");
+        document.write(zmienna.substring(4)+"<br>");
+
+        document.write(zmienna.toLowerCase()+"<br>");
+        document.write(zmienna.toUpperCase()+"<br>")
+       
+       </script> 
+
+
+    
+    
+    
+
+</body>
+</html>

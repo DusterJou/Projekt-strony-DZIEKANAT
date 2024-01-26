@@ -1,0 +1,30 @@
+em{
+    color: red;
+    font-weight: bold;
+}
+
+label{
+    display: inline-block;
+    width: 110px;
+    height: 20px;
+}
+fieldset{
+    width: 320px;
+    margin: 20px auto;
+    border-radius: 10px;
+    border-style: double;
+    border-color: rgb(17, 4, 194);
+    border-width: 2px;
+}
+legend{
+    font-family: 'Trebuchet MS';
+    font-size: 20px;
+    color: antiquewhite;
+}
+input:not(input[type="checkbox"]), select{
+    width: 170px;
+}
+
+input:focus{
+    background-color: rgb(243, 85, 159);
+}

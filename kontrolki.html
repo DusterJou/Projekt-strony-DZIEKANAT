@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .s1>div{
+            display: inline-block;
+            width: 180px;
+            height: 40px;
+            border: 1px solid black;
+            text-align: center;
+            padding: 7px;
+            margin: 5px;
+        }
+        .unpressed{
+            background-image: url(images/unpressed.png);
+            background-repeat: no-repeat;
+            background-size: auto;
+            color: darkblue;
+            font-weight: bold;
+        }
+        .pressed {  /* div:hover  */
+            background-image: url(images/pressed.png);
+            background-repeat: no-repeat;
+            background-size: auto;
+            color: lightblue;
+            font-weight: bold;
+        }
+        .naglowek{
+            color: brown;
+            background-color: bisque;
+        }
+    </style>
+    <script src="script/ruchomyTekst.js"></script>
+    <script src="script/zegar.js"></script>
+</head>
+<body > <!-- onload="zegar()" -->
+    <section class="s1">
+        <h2 class="naglowek">Przewijany tekst</h2>
+        <input type="text" id="rTekst" value="To jest ruchomy tekst..." >
+        <br>
+        <div id="btnStart" class="unpressed" 
+        onclick="ruchomytekst()" 
+        onmouseout="podmienKlase('btnStart','unpressed')" 
+        onmouseover="podmienKlase('btnStart', 'pressed')" > START </div>
+        <div id="btnStop" class="unpressed"
+        onclick="stopTekst()"
+        onmouseout="podmienKlase('btnStop','unpressed')" 
+        onmouseover="podmienKlase('btnStop', 'pressed')"
+        > STOP </div>
+    </section>
+
+    <section>
+        <h2 class="naglowek">Zegar</h2>
+        <input type="text" name="" id="tZegar">
+        
+        <h2 class="naglowek">Stoper</h2>
+        <input type="text" name="" id="tStoper"> <br>
+        <input type="button" value="Start" id="btnstoperStart" onclick="startStoper()">
+        <input type="button" value="Stop" id="btnstoperStop" onclick="stopStoper()">
+        
+    </section>
+    <section>
+        <h1 class="naglowek">Strona z licznikiem odwiedzin</h1>
+    
+    <p>Liczba odwiedzin: <span id="visitCountDisplay"></span></p>
+    </section>
+<script>
+    //zegar();
+</script>
+<script src="app.js">
+
+</script>
+</body>
+</html>

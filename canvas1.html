@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANVAS</title>
+    <style>
+        body{background-color: lightblue;}
+        canvas{
+            border: 1px dashed black;
+            background-color: white;
+        }
+        input{
+            color: blue;
+        }
+        input:focus{
+            background-color: yellow;
+        }
+    </style>
+    <script>
+        //P=(0,0)
+        //  ---------
+        // |        |
+        // |        |
+        // |        |
+        //  ---------
+        //           P=(500,300)
+
+        let can, cont;
+        window.onload= function(){
+            can=document.getElementById("plotno");
+        }    
+            function rysujLinie() {
+                if(cont==null){
+                  cont=can.getContext("2d");  
+                }
+                cont.beginPath();
+                cont.strokeStyle="red";
+                cont.lineWidth=3;
+                cont.lineCap="round";
+                cont.moveTo(10,10);
+                cont.lineTo(can.width-10, can.height-10);
+                cont.stroke();
+
+                cont.beginPath();
+                cont.lineWidth=2;
+                cont.strokeStyle="#00FF00";
+                cont.moveTo(20,10);
+                cont.lineTo(can.width, can.height-10);
+                cont.stroke();
+            }
+
+            function rysujKrzywa() {
+                if(cont==null){
+                  cont=can.getContext("2d");  
+                }
+                cont.beginPath();
+                cont.strokeStyle="#235411";
+                cont.lineWidth=5;
+                cont.arc(200, 150, 100, 1.25*Math.PI, 1.75*Math.PI, false);
+                cont.stroke();
+
+                cont.lineWidth = 6;
+                cont.strokeStyle = "pink";
+                cont.beginPath();
+                cont.moveTo(123, 116);
+                cont.bezierCurveTo(163, 286, 280, 36, 274, 253);
+                cont.stroke();
+            }
+
+            function rysujFigury() {
+                if(cont==null){
+                  cont=can.getContext("2d");  
+                }
+                let dlRamion=100;
+                let dlPodstawy=150;
+                let h= Math.sqrt(Math.pow(dlRamion,2)- Math.pow(dlPodstawy/2,2));
+
+                cont.beginPath();
+                cont.moveTo(  (can.width/2)-dlPodstawy/2,  can.height/2 );  // A
+                cont.lineTo( (can.width/2) + dlPodstawy/2,  can.height/2 ); // B
+                cont.lineTo( (can.width/2),  can.height/2-h ); // C
+                //cont.lineTo(  (can.width/2)-dlPodstawy/2,  can.height/2 );  // A
+                cont.closePath();
+                cont.stroke();
+
+                cont.fillStyle="yellow";
+                cont.fill();
+
+                cont.lineWidth=10;
+                cont.strokeStyle="#996600";
+                cont.lineJoin="round";
+                cont.stroke();
+
+                cont.lineWidth=2;
+                cont.strokeStyle="rgb(200,0,0)";
+                cont.strokeRect(150,50,90,60);
+
+                cont.fillStyle="rgba(250,0,0,0.5)";
+                cont.fillRect(150,50,90,60);
+
+            }
+            function czysc() {
+                if(cont==null){
+                  cont=can.getContext("2d");  
+                }
+                cont.clearRect(0,0, can.width, can.height);
+            }
+       
+    </script>
+</head>
+<body>
+    
+    <input type="button" value="Rysuj linie" onclick="rysujLinie()">
+    <input type="button" value="Rysuj krzywą" onclick="rysujKrzywa()">
+    <input type="button" value="Rysuj figury" onclick="rysujFigury()">
+    <input type="button" value="Rysuj tekst" onclick=" ">
+    <input type="button" value="czyść" onclick="czysc()">
+    <br>
+    <canvas id="plotno" width="500" height="300"></canvas>
+
+</body>
+</html>

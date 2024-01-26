@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pracownik - obiekty</title>
+    <script>
+
+        function pojazdy(marka, model, id, cena, rok, strona) {
+            this.marka=marka;
+            this.model=model;
+            this.id=id;
+            this.cena=cena;
+            this.rok=rok;
+            this.strona=strona;
+        }
+
+        const tablicaP =[];   // [1,2,"asd", true];
+        //console.table(tablicaP);
+
+        tablicaP[0] = new pojazdy("Opel", "Corsa",1, 15000,2015, "www.opel.pl");
+        tablicaP[1] = new pojazdy("VW", "Polo",2, 11000,2010, "www.vw.pl");
+        tablicaP[2] = new pojazdy("BMW", "5",3, 125000,2019, "www.bmw.pl");
+        tablicaP[3] = new pojazdy("VW", "Caddy",4, 100000,2018, "www.vw.pl");
+        tablicaP[4] = new pojazdy("Tesla", "S",5, 320000,2020, "www.tesla.com");
+
+        function wyswietlTabele(tabPojazdy) {
+            let txt="";
+            txt+="<table>";
+            txt+=`
+             <tr>
+             <td>ID</td>
+             <td>Marka</td>
+             <td>Model</td>
+             <td>Rok</td>
+             <td>Cena</td>
+             <td>Strona producenta</td>
+             </tr>  `;  
+                
+             for (let i = 0; i < tabPojazdy.length; i++) {
+                //console.log(tabPojazdy[i].id);
+                txt+=`
+                    <tr>
+                    <td>${tabPojazdy[i].id}</td>
+                    <td>${tabPojazdy[i].marka}</td>
+                    <td>${tabPojazdy[i].model}</td>
+                    <td>${tabPojazdy[i].rok}</td>
+                    <td>${tabPojazdy[i].cena}</td>
+                    <td><a href=http://${tabPojazdy[i].strona} > ${tabPojazdy[i].strona} </a></td>
+                    </tr>  `;             
+             }
+            txt+="</table>";
+            let ele=document.getElementById("divWynik");
+             ele.innerHTML=txt;
+        }
+
+    </script>
+    <style>
+        table tr td{
+            border: 1px solid black;
+        }
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="button" value="Dane" onclick="wyswietlTabele(tablicaP)"><br>
+    <div id="divWynik"></div>
+
+</body>
+</html>

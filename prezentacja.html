@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prezentacja</title>
+
+    <link rel="stylesheet" href="style/prezentacja.css">
+
+</head>
+
+<body>
+
+    <div id="impress">
+
+
+        <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
+            <q>WItamy w dziekanacie, Szanowny Studencie!</q>
+        </div>
+
+
+        <div class="step slide" data-x="0" data-y="-1500">
+            <q>Z tej prezentacji dowiesz się tylko tyle, że straciłeś cenny czaso glądając 3 slajdy zamiast się uczy ćdo sesji.</q>
+        </div>
+
+        <div class="step slide" data-x="1000" data-y="-1500">
+            <q>Powodzenia na sesji!</q>
+        </div>
+
+    </div>
+
+    <div class="hint">
+        <p>Użyj spacji lub strzałek do nawigacji</p>
+    </div>
+    <script src="script/impress.js">
+
+    </script>
+    <script>
+        if ("ontouchstart" in document.documentElement) {
+            document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+        }
+
+        impress().init();
+    </script>
+
+</body>

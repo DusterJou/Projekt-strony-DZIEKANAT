@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+  
+    <script>
+    
+        let z="zmienna z";
+       
+        {
+            let b=10;
+            console.log(z,b);
+            var a='aaaaa';
+        }
+        console.log(z,a);
+        const t=10; // tablice i obiekty 
+        
+        alert("komunikat");
+        alert("Zmienna: " + z);
+        alert(`Zmienna: ${z}`); //''  " "  ` ` 
+
+        let zmiennaA = Number(prompt("Podaj liczbę A"));
+        document.write(` Zmienna A wynosi: ${zmiennaA} <br> `);
+
+        document.write(`Typ zmiennej A: ${typeof zmiennaA}` );
+
+        for(let i=0; i<10; i++){
+            document.write(`Lini nr: ${i} <br>`);
+        }
+
+
+    </script>
+
+
+</body>
+</html>

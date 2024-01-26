@@ -1,0 +1,27 @@
+.praca{
+    color: antiquewhite;
+}
+table, tr, td {
+    border: 2px solid black;
+    margin: auto;
+    border-spacing: 0px;
+}
+.n>td{
+    border: 2px solid bisque;
+    font-size: 20px;
+    color: antiquewhite;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+   text-align: center;
+   font-weight: bold;
+}
+td{
+    padding: 8px;
+}
+tbody tr td {
+    border-color: bisque;
+    color: antiquewhite;
+}
+table{
+    background-color: brown;
+}

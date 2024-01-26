@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artykuł o CSS</title>
+    <style>
+        h1,
+        h2 {
+            color: brown;
+            background-color: bisque;
+        }
+    </style>
+    <link rel="stylesheet" href="style/uklad.css">
+    <link rel="stylesheet" href="style/menu.css">
+</head>
+
+<body>
+    <header>
+        <h1 style="color: white; background-color: black;">WITAMY W DZIEKANACIE</h1>
+    </header>
+    <div class="kontener">
+
+        <nav>
+            <h2>Menu</h2>
+            <ul>
+                <li>
+                    <a href="index.html">Strona główna</a>
+                </li>
+                <li>
+                    <a href="historia.html">Historia</a>
+                </li>
+                <li>
+                    <a href="pracownicy.html">Pracownicy</a>
+                </li>
+                <li>
+                    <a href="nasze-osiagniecia.html">Nasze osiągnięcia</a>
+                </li>
+                <li>
+                    <a href="kontakt.html">Kontakt</a>
+                </li>
+                <li>
+                    <a href="praca.html">Praca</a>
+                </li>
+                <li>
+                    <a href="prezentacja.html">Prezentacja</a>
+                </li>
+            </ul>
+        </nav>
+        <article>
+            <section>
+                <header>
+                    <h2> Marginesy w CSS </h2>
+                    <h3> Wprowadzenie </h3>
+                </header>
+                <p>
+                    Każdy element generuje w dokumencie prostokątny obszar zwany pudełkiem (ang. Box model). Pudełko
+                    składa się z:
+                </p>
+                <ol>
+                    <li> Zawartości - "Content" (np. test, obrazek itd.)
+                    <li> Otaczających marginesów wewnętrznych - "Padding"
+                    <li> Obramowania - "Border"
+                    <li> Marginesów - "Margin"
+                </ol>
+                <p>
+                    Ostatnie trzy składniki są opcjonalne, tzn. mogą mieć wartość zero. Obwód (zewnętrzny) każdego z
+                    czterech obszarów nazywamy krawędzią ("Edge"). Według CSS rozmiary elementu (własności width oraz
+                    height) odnoszą się do samej zawartości ("Content") i nie wpływają na pozostałe obszary modelu
+                    pudełkowego ("Box model"), które są tworzone na zewnątrz zawartości, ale wewnątrz pudełka. Natomiast
+                    tło elementu jest określone dla wszystkich z podanych powyżej obszarów z wyjątkiem marginesów
+                    zewnętrznych, które zawsze są przez roczyste ("Transparent"). Zapamiętanie tych krótkich zasad
+                    pozwoli Ci uniknąć w przyszłości nieoczeki wanych problemów z wyświetlaniem elementów strony.
+                    Na <a href="#zdjecie1">rys. 1</a> znajdziesz graficzną interpretację pudełkowej budowy elementów w
+                    CSS.
+                </p>
+                <figure id="zdjecie1">
+                    <img src="images/rysunek1.png" alt="marginesy w css">
+                    <figcaption>Rysunek 1. Strukutra ramek i marginesów znacznika HTML wg. CSS. </figcaption>
+                </figure>
+            </section>
+            <section>
+                <h2>Przykład zastosowania wzoru w znacznku figure</h2>
+                <p>
+                    Postać czasowa sygnału okresowego zmiennego sinusoidalnie zgodnie z zależnością:
+                </p>
+                <figure>
+                    x(<var>t</var>)=A<sub>m</sub><sup>1</sup>sin(2&pi;f<var>t</var>+&phi;<sub>0</sub>)
+                    <figcaption>
+                        gdzie:
+                        <ul>
+                            <li> <var>t</var> - czas,
+                            <li> A<sub>m</sub><sup>1</sup> - amplituda sygnału,
+                            <li> f - częstotliwość sygnału,
+                            <li> &phi;<sub>0</sub> - faza początkowa.
+                        </ul>
+                    </figcaption>
+                </figure>
+                <address>
+                    Autorzy artykułu: <br>
+                    Jan Kowalski
+                    adres email: <a href="mailto:jan.kowalski@put.poznan.pl">jan.kowalski@put.poznan.pl</a> <br>
+                    Henryk Nowak
+                    adres email: <a href="mailto:henryk.nowak@put.poznan.pl">Napisz do Henryka</a> <br>
+                    Źródło strony: <a href="http://www.wikipedia.pl">wikipedia.pl </a>
+                </address>
+            </section>
+        </article>
+
+    </div>
+
+    <footer>prawa autorskie MF z 2023 <br>
+        Politechnika Poznańska </footer>
+
+
+</body>
+
+</html>
